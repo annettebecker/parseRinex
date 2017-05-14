@@ -48,6 +48,8 @@ public class ParseRinex {
         Observations observationRover = roverIn.getNextObservations();
         Observations observationReferenz = masterIn.getNextObservations();
         
+        
+        //get Satellitepostion
         SatellitePosition sp = navigationIn.getGpsSatPosition(observationReferenz, 2, 'G', 1);
         System.out.println(sp.toString());
     }
