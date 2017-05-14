@@ -5,6 +5,7 @@ import java.util.logging.Logger;
 import org.gogpsproject.NavigationProducer;
 import org.gogpsproject.Observations;
 import org.gogpsproject.ObservationsProducer;
+import org.gogpsproject.SatellitePosition;
 import org.gogpsproject.parser.rinex.RinexNavigationParser;
 import org.gogpsproject.parser.rinex.RinexObservationParser;
 
@@ -47,10 +48,8 @@ public class ParseRinex {
         Observations observationRover = roverIn.getNextObservations();
         Observations observationReferenz = masterIn.getNextObservations();
         
-        
-        
-                
-
+        SatellitePosition sp = navigationIn.getGpsSatPosition(observationReferenz, 2, 'G', 1);
+        System.out.println(sp.toString());
     }
 
 }
