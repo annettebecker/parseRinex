@@ -21,7 +21,7 @@ public class ParseRinex {
     public static void main(String[] args) {
         //Observation Data
         ObservationsProducer roverIn = new RinexObservationParser(new File("C:\\Users\\Annette\\Documents\\Studium Bochum\\Softwareentwicklungsprojekt\\Daten\\COM3_170423_174145.obs"));
-        ObservationsProducer masterIn = new RinexObservationParser(new File("C:\\Users\\Annette\\Documents\\Studium Bochum\\Softwareentwicklungsprojekt\\Daten\\4722K06115201705071300A.17O"));
+        ObservationsProducer masterIn = new RinexObservationParser(new File("C:\\Users\\Annette\\Documents\\Studium Bochum\\Softwareentwicklungsprojekt\\Daten\\4722K06115201705071300A - Kopie.17O"));
         
         //NavigationData
         NavigationProducer navigationIn = new RinexNavigationParser(new File("C:\\Users\\Annette\\Documents\\Studium Bochum\\Softwareentwicklungsprojekt\\Daten\\4722K06115201705071300A.17N"));
@@ -47,6 +47,10 @@ public class ParseRinex {
         //Data in obsset
         Observations observationRover = roverIn.getNextObservations();
         Observations observationReferenz = masterIn.getNextObservations();
+        
+        
+        
+        
         
         
         //get Satellitepostion
